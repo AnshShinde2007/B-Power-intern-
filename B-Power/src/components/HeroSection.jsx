@@ -2,12 +2,42 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const products = [
-  { id: 1, title: 'Instant Credit Access', description: 'MSMEs can access credit instantly with no interest for 48 days.' },
-  { id: 2, title: 'One-Day Payment', description: 'Suppliers receive payments within 24 hours ensuring smooth cash flow.' },
-  { id: 3, title: 'Smart Liquidity', description: 'Optimize working capital with AI-driven liquidity management.' },
-  { id: 4, title: 'Invoice Financing', description: 'Get funding against unpaid invoices without collateral.' },
-  { id: 5, title: 'Supplier Onboarding', description: 'Easy digital onboarding and KYC for vendors.' },
-  { id: 6, title: 'Analytics Dashboard', description: 'Real-time cash flow and risk visibility.' },
+  {
+    id: 1,
+    title: 'Instant Credit Access',
+    description: 'MSMEs can access credit instantly with no interest for 48 days.',
+    image: 'https://via.placeholder.com/300x180?text=Instant+Credit',
+  },
+  {
+    id: 2,
+    title: 'One-Day Payment',
+    description: 'Suppliers receive payments within 24 hours ensuring smooth cash flow.',
+    image: 'https://via.placeholder.com/300x180?text=One-Day+Payment',
+  },
+  {
+    id: 3,
+    title: 'Smart Liquidity',
+    description: 'Optimize working capital with AI-driven liquidity management.',
+    image: 'https://via.placeholder.com/300x180?text=Smart+Liquidity',
+  },
+  {
+    id: 4,
+    title: 'Invoice Financing',
+    description: 'Get funding against unpaid invoices without collateral.',
+    image: 'https://via.placeholder.com/300x180?text=Invoice+Financing',
+  },
+  {
+    id: 5,
+    title: 'Supplier Onboarding',
+    description: 'Easy digital onboarding and KYC for vendors.',
+    image: 'https://via.placeholder.com/300x180?text=Supplier+Onboarding',
+  },
+  {
+    id: 6,
+    title: 'Analytics Dashboard',
+    description: 'Real-time cash flow and risk visibility.',
+    image: 'https://via.placeholder.com/300x180?text=Analytics+Dashboard',
+  },
 ];
 
 export default function HomePage() {
@@ -37,7 +67,12 @@ export default function HomePage() {
           <div style={{ width: '90%', maxWidth: '800px', margin: '0 auto' }}>
             <div
               className="bg-secondary text-white rounded overflow-hidden"
-              style={{ paddingTop: '56.25%', position: 'relative', borderRadius: '15px', overflow: 'hidden' }}
+              style={{
+                paddingTop: '56.25%',
+                position: 'relative',
+                borderRadius: '15px',
+                overflow: 'hidden',
+              }}
             >
               <div className="position-absolute top-50 start-50 translate-middle text-center">
                 <h2>Explainer Video Placeholder</h2>
@@ -72,6 +107,12 @@ export default function HomePage() {
                           className="card"
                           style={{ minWidth: '18rem', flex: '0 0 auto' }}
                         >
+                          <img
+                            src={product.image}
+                            alt={product.title}
+                            className="card-img-top"
+                            style={{ height: '180px', objectFit: 'cover' }}
+                          />
                           <div className="card-body">
                             <h5 className="card-title">{product.title}</h5>
                             <p className="card-text">{product.description}</p>
